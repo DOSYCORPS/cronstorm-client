@@ -1,5 +1,5 @@
 {
-  "name": "pocketwatch",
+  "name": "@dosy/pocketwatch",
   "version": "1.0.0",
   "description": "Node.js client library for PocketwatchAPI",
   "main": "index.js",
