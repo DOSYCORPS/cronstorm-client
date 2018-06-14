@@ -1,0 +1,29 @@
+{
+  "name": "pocketwatch",
+  "version": "1.0.0",
+  "description": "Node.js client library for PocketwatchAPI",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dosyago-corp/pocketwatch.js.git"
+  },
+  "keywords": [
+    "pocketwatch",
+    "dosyago",
+    "dosy",
+    "timers",
+    "webhook",
+    "intervals",
+    "cron",
+    "scheduled tasks"
+  ],
+  "author": "@dosy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dosyago-corp/pocketwatch.js/issues"
+  },
+  "homepage": "https://github.com/dosyago-corp/pocketwatch.js#readme"
+}
