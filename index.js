@@ -2,11 +2,11 @@
 
 {
   const version = 'v1';
-  const origin = 'https://api.pocketwatch.xyz';
+  const origin = false ? 'https://api.pocketwatch.xyz' : 'http://localhost:8080';
   const fetch = require('node-fetch');
   const timer = {
    create, 
-   delete
+   "delete": del
   };
   const key = {
     refresh
@@ -22,13 +22,18 @@
 
   module.exports = pocketwatch;
 
+  function authorize(key) {
+    apiKey = key;
+    guardAuthorized();
+  }
+
   async function create({
       name:name="",interval,intervalCount,duration,durationCount,url,method} = {}) {
     guardAuthorized();
-    const method = "POST"; 
+    const apimethod = "POST"; 
     const headers = { 'Content-Type': 'application/json' };
-    const url = `${origin}/${version}/timer/new`;
-    const body = {
+    const apiurl = `${origin}/${version}/timer/new`;
+    const apibody = {
       apiKey,
       name,
       interval_unit_type: interval,
@@ -38,10 +43,10 @@
       url,
       method
     };
-    return fetch(url, {headers,method,body});
+    return fetch(apiurl, {headers,method:apimethod,body:apibody});
   }
 
-  async function delete(keyName) {
+  async function del(keyName) {
     guardAuthorized();
     const url = `${origin}/${version}/delete/timer`;
     const method = "POST"; 
@@ -78,7 +83,8 @@
   function guardAuthorized() {
     if ( ! apiKey ) {
       throw new TypeError(`
-        Please call .authorize(apiKey) to set your API key before using the API.
+        Please call .authorize(apiKey) 
+        with a valid API key to set your API key before using the API.
         Read the docs at:
         https://dosyago-corp.github.io/pocketwatch-api/
         `);
