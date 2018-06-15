@@ -43,7 +43,7 @@
       url,
       method
     };
-    return fetch(apiurl, {headers,method:apimethod,body:apibody});
+    return fetch(apiurl, {headers,method:apimethod,body:JSON.stringify(apibody)});
   }
 
   async function del(keyName) {
@@ -55,7 +55,7 @@
       apiKey,
       keyName
     };
-    return fetch(url, {headers,method,body});
+    return fetch(url, {headers,method,body:JSON.stringify(body)});
   }
 
   async function refresh() {
@@ -66,7 +66,7 @@
     const body = {
       apiKey
     };
-    return fetch(url, {headers,method,body});
+    return fetch(url, {headers,method,body:JSON.stringify(body)});
   }
 
   async function cancel() {
@@ -77,7 +77,7 @@
     const body = {
       apiKey
     };
-    return fetch(url, {headers,method,body});
+    return fetch(url, {headers,method,body:JSON.stringify(body)});
   }
 
   function guardAuthorized() {
