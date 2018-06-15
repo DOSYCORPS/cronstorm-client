@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/dosyago-corp/pocketwatch.js/issues"
   },
-  "homepage": "https://github.com/dosyago-corp/pocketwatch.js#readme"
+  "homepage": "https://github.com/dosyago-corp/pocketwatch.js#readme",
+  "dependencies": {
+    "node-fetch": "^2.1.2"
+  }
 }
