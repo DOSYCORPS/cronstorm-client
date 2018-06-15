@@ -2,7 +2,7 @@
 
 {
   const version = 'v1';
-  const origin = false ? 'https://api.pocketwatch.xyz' : 'http://localhost:8080';
+  const origin = 'https://api.pocketwatch.xyz';
   const fetch = require('node-fetch');
   const timer = {
    create, 
