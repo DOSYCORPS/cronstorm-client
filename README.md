@@ -8,6 +8,8 @@ Node.js client library for the Pocketwatch Timer API
   npm i --save @dosy/pocketwatch
 ```
 
+If you're interested, you can take a look [at the package page on NPM](https://www.npmjs.com/package/@dosy/pocketwatch)
+
 # Using
 
 ```js
