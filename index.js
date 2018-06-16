@@ -28,10 +28,14 @@
   }
 
   async function create({
-      name:name="",interval,intervalCount,duration,durationCount,url,method} = {}) {
+      name:name="",interval,intervalCount,duration,
+      durationCount,url,method,body:body="",
+      contentType:contentType = 'application/json'} = {}) {
     guardAuthorized();
     const apimethod = "POST"; 
-    const headers = { 'Content-Type': 'application/json' };
+    const headers = { 
+      'Content-Type': 'application/json'
+    };
     const apiurl = `${origin}/${version}/timer/new`;
     const apibody = {
       apiKey,
@@ -41,7 +45,9 @@
       duration_unit_type: duration,
       duration_unit_count: durationCount,
       url,
-      method
+      method,
+      body,
+      contentType
     };
     return fetch(apiurl, {headers,method:apimethod,body:JSON.stringify(apibody)});
   }
