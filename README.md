@@ -1,4 +1,4 @@
-# pocketwatch.js
+# Pocketwatch.js
 
 Node.js client library for the Pocketwatch Timer API
 
