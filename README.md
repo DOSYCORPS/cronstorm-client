@@ -1,6 +1,8 @@
 # Pocketwatch.js
 
-Node.js client library for the Pocketwatch Timer API
+Node.js client library for the Pocketwatch Timer API.
+
+You can use it to create schedulers to issue HTTP requests at intervals as fine as 1 second, or as long as forever. Duration can be from 1 second to forever.
 
 # Installing
 
