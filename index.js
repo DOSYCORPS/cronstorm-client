@@ -29,7 +29,8 @@
 
   async function create({
       name:name="",interval,intervalCount,duration,
-      durationCount,url,method,body:body="",
+      durationCount,url,body:body="",
+      method:method="GET",
       contentType:contentType = 'application/json'} = {}) {
     guardAuthorized();
     const apimethod = "POST"; 
