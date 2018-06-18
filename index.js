@@ -1,6 +1,8 @@
 "use strict";
 
 {
+  const package_version = require('./package.json').version;
+  const request_source = `Pocketwatch.js Node.js Client Library version: ${package_version}`;
   const version = 'v1';
   const origin = 'https://api.pocketwatch.xyz';
   const fetch = require('node-fetch');
@@ -39,6 +41,7 @@
     };
     const apiurl = `${origin}/${version}/timer/new`;
     const apibody = {
+      request_source,
       apiKey,
       name,
       interval_unit_type: interval,
