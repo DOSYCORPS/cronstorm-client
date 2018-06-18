@@ -26,7 +26,7 @@ You can create and delete timers, refresh your API key and cancel your subscript
 
 Find out more about using the client library, or the API, [at our documentation portal](https://dosyago-corp.github.io/pocketwatch-api/)
 
-# Getting access to the beta preview
+# Getting access
 
 If you haven't already, head to our [developer portal](https://api.pocketwatch.xyz/) to choose a monthly plan and generate a new secret API key. 
 
