@@ -4,7 +4,7 @@
   const package_version = require('./package.json').version;
   const request_source = `Pocketwatch.js Node.js Client Library version: ${package_version}`;
   const version = 'v1';
-  const origin = 'https://api.pocketwatch.xyz';
+  const origin = 'http://localhost:8080'; // 'https://api.pocketwatch.xyz';
   const fetch = require('node-fetch');
   const timer = {
    create, 
@@ -54,12 +54,15 @@
       contentType
     };
     const resp = await fetch(apiurl, {headers,method:apimethod,body:JSON.stringify(apibody)});
-    const json_resp = await resp.json();
+    const json_resp = await resp.text();
     return json_resp;
   }
 
   async function del(keyName) {
     guardAuthorized();
+    if ( typeof keyName !== "string" ) {
+      keyName = keyName.keyName; 
+    }
     const url = `${origin}/${version}/delete/timer`;
     const method = "POST"; 
     const headers = { 'Content-Type': 'application/json' };
@@ -68,7 +71,7 @@
       keyName
     };
     const resp = await fetch(url, {headers,method,body:JSON.stringify(body)});
-    const json_resp = await resp.json();
+    const json_resp = await resp.text();
     return json_resp;
   }
 
@@ -81,7 +84,7 @@
       apiKey
     };
     const resp = await fetch(url, {headers,method,body:JSON.stringify(body)});
-    const json_resp = await resp.json();
+    const json_resp = await resp.text();
     return json_resp;
   }
 
@@ -94,7 +97,7 @@
       apiKey
     };
     const resp = await fetch(url, {headers,method,body:JSON.stringify(body)})
-    const json_resp = await resp.json();
+    const json_resp = await resp.text();
     return json_resp;
   }
 
