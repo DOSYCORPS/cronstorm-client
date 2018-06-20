@@ -4,7 +4,6 @@
   const package_version = require('./package.json').version;
   const request_source = `Pocketwatch.js Node.js Client Library version: ${package_version}`;
   const version = 'v1';
-  const origin = 'https://api.pocketwatch.xyz';
   const fetch = require('node-fetch');
   const timer = {
    create, 
@@ -20,12 +19,17 @@
     authorize, timer, key, subscription
   };
 
+  let origin = 'https://api.pocketwatch.xyz';
   let apiKey;
 
   module.exports = pocketwatch;
 
-  function authorize(key) {
+  function authorize(key, {newOrigin:newOrigin = null} = {}) {
     apiKey = key;
+    if ( !! newOrigin ) {
+      console.log("Overriding origin", newOrigin);
+      origin = newOrigin; 
+    }
     guardAuthorized();
   }
 
@@ -40,6 +44,7 @@
       'Content-Type': 'application/json'
     };
     const apiurl = `${origin}/${version}/timer/new`;
+    console.log('uri', apiurl);
     const apibody = {
       request_source,
       apiKey,
