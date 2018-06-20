@@ -32,4 +32,6 @@ Find out more about using the client library, or the API, [at our documentation 
 
 If you haven't already, head to our [developer portal](https://api.pocketwatch.xyz/) to choose a monthly plan and generate a new secret API key. 
 
+# Show HN
 
+[Just posted it](https://news.ycombinator.com/item?id=17353486)
