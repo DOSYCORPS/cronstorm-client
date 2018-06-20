@@ -59,7 +59,7 @@
       contentType
     };
     const resp = await fetch(apiurl, {headers,method:apimethod,body:JSON.stringify(apibody)});
-    const json_resp = await resp.text();
+    const json_resp = await resp.json();
     return json_resp;
   }
 
@@ -76,7 +76,7 @@
       keyName
     };
     const resp = await fetch(url, {headers,method,body:JSON.stringify(body)});
-    const json_resp = await resp.text();
+    const json_resp = await resp.json();
     return json_resp;
   }
 
@@ -89,7 +89,7 @@
       apiKey
     };
     const resp = await fetch(url, {headers,method,body:JSON.stringify(body)});
-    const json_resp = await resp.text();
+    const json_resp = await resp.json();
     return json_resp;
   }
 
@@ -102,7 +102,7 @@
       apiKey
     };
     const resp = await fetch(url, {headers,method,body:JSON.stringify(body)})
-    const json_resp = await resp.text();
+    const json_resp = await resp.json();
     return json_resp;
   }
 
