@@ -53,7 +53,9 @@
       body,
       contentType
     };
-    return fetch(apiurl, {headers,method:apimethod,body:JSON.stringify(apibody)});
+    const resp = await fetch(apiurl, {headers,method:apimethod,body:JSON.stringify(apibody)});
+    const json_resp = await resp.json();
+    return json_resp;
   }
 
   async function del(keyName) {
@@ -65,7 +67,9 @@
       apiKey,
       keyName
     };
-    return fetch(url, {headers,method,body:JSON.stringify(body)});
+    const resp = await fetch(url, {headers,method,body:JSON.stringify(body)});
+    const json_resp = await resp.json();
+    return json_resp;
   }
 
   async function refresh() {
@@ -76,7 +80,9 @@
     const body = {
       apiKey
     };
-    return fetch(url, {headers,method,body:JSON.stringify(body)});
+    const resp = await fetch(url, {headers,method,body:JSON.stringify(body)});
+    const json_resp = await resp.json();
+    return json_resp;
   }
 
   async function cancel() {
@@ -87,7 +93,9 @@
     const body = {
       apiKey
     };
-    return fetch(url, {headers,method,body:JSON.stringify(body)});
+    const resp = await fetch(url, {headers,method,body:JSON.stringify(body)})
+    const json_resp = await resp.json();
+    return json_resp;
   }
 
   function guardAuthorized() {
