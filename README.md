@@ -2,7 +2,9 @@
 
 Node.js client library for the Pocketwatch Timer API.
 
-You can use it to create schedulers to issue HTTP requests at intervals as fine as 1 second, or as long as forever. Duration can be from 1 second to forever.
+Pocketwatch Timers expose recurrent job scheduling as a service. 
+
+You can use Pocketwatch Timers to create schedulers to issue HTTP requests at intervals as fine as 1 second, or as long as forever. Duration can be from 1 second to forever.
 
 # Installing
 
