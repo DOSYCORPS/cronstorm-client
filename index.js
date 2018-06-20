@@ -4,7 +4,7 @@
   const package_version = require('./package.json').version;
   const request_source = `Pocketwatch.js Node.js Client Library version: ${package_version}`;
   const version = 'v1';
-  const origin = 'http://localhost:8080'; // 'https://api.pocketwatch.xyz';
+  const origin = 'https://api.pocketwatch.xyz';
   const fetch = require('node-fetch');
   const timer = {
    create, 
