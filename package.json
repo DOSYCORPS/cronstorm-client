@@ -4,7 +4,7 @@
   "description": "Node.js client library for PocketwatchAPI",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",

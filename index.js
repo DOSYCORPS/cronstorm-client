@@ -44,7 +44,6 @@
       'Content-Type': 'application/json'
     };
     const apiurl = `${origin}/${version}/timer/new`;
-    console.log('uri', apiurl);
     const apibody = {
       request_source,
       apiKey,
@@ -65,7 +64,7 @@
 
   async function del(keyName) {
     guardAuthorized();
-    if ( typeof keyName !== "string" ) {
+    if ( !!keyName && typeof keyName !== "string" ) {
       keyName = keyName.keyName; 
     }
     const url = `${origin}/${version}/delete/timer`;
