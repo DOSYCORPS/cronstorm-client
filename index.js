@@ -27,7 +27,7 @@
   function authorize(key, {newOrigin:newOrigin = null} = {}) {
     apiKey = key;
     if ( !! newOrigin ) {
-      console.log(`Overriding origin ${newOrigin});
+      console.log(`Overriding origin ${newOrigin}`);
       origin = newOrigin; 
     }
     guardAuthorized();
