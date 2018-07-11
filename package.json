@@ -1,31 +1,28 @@
 {
-  "name": "@dosy/pocketwatch",
+  "name": "cronstorm-client",
   "version": "1.1.16",
-  "description": "Node.js client library for PocketwatchAPI",
+  "description": "Node.js client library for the CronStorm API",
   "main": "index.js",
   "scripts": {
     "test": "node test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dosyago-corp/pocketwatch.js.git"
+    "url": "git+https://github.com/dosyago-corp/cronstorm-client.git"
   },
   "keywords": [
-    "pocketwatch",
+    "cronstorm",
     "dosyago",
     "dosy",
-    "timers",
-    "webhook",
-    "intervals",
     "cron",
-    "scheduled tasks"
+    "scheduled job"
   ],
   "author": "@dosy",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dosyago-corp/pocketwatch.js/issues"
+    "url": "https://github.com/dosyago-corp/cronstorm-client/issues"
   },
-  "homepage": "https://github.com/dosyago-corp/pocketwatch.js#readme",
+  "homepage": "https://github.com/dosyago-corp/cronstorm-client#readme",
   "dependencies": {
     "node-fetch": "^2.1.2"
   }
