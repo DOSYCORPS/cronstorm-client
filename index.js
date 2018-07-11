@@ -2,10 +2,10 @@
 
 {
   const package_version = require('./package.json').version;
-  const request_source = `Pocketwatch.js Node.js Client Library version: ${package_version}`;
+  const request_source = `CronStorm.js Node.js Client Library version: ${package_version}`;
   const version = 'v1';
   const fetch = require('node-fetch');
-  const timer = {
+  const job = {
    create, 
    "delete": del
   };
@@ -15,14 +15,14 @@
   const subscription = {
     cancel
   };
-  const pocketwatch = {
-    authorize, timer, key, subscription
+  const cronstorm = {
+    authorize, job, key, subscription
   };
 
-  let origin = 'https://api.pocketwatch.xyz';
+  let origin = 'https://cronstorm.com';
   let apiKey;
 
-  module.exports = pocketwatch;
+  module.exports = cronstorm;
 
   function authorize(key, {newOrigin:newOrigin = null} = {}) {
     apiKey = key;
@@ -43,7 +43,7 @@
     const headers = { 
       'Content-Type': 'application/json'
     };
-    const apiurl = `${origin}/${version}/timer/new`;
+    const apiurl = `${origin}/${version}/job/new`;
     const apibody = {
       request_source,
       apiKey,
@@ -67,7 +67,7 @@
     if ( !!keyName && typeof keyName !== "string" ) {
       keyName = keyName.keyName; 
     }
-    const url = `${origin}/${version}/delete/timer`;
+    const url = `${origin}/${version}/delete/job`;
     const method = "POST"; 
     const headers = { 'Content-Type': 'application/json' };
     const body = {
